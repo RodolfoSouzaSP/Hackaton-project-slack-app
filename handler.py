@@ -14,7 +14,7 @@ from slack.errors import SlackApiError
 
 s3 = boto3.client('s3',)
 
-client = WebClient(token="xoxb-1261339097925-1275230325686-NTCujhcEGrW29gG7frZCNVcW")
+client = WebClient(token="<TOKEN SLACK>")
 
 def sendMessageToSlack(message,username):
     try:
