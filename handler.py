@@ -76,6 +76,7 @@ def hello(event, context):
     data = returnInformationDeploy(path)
     message = messageToSlack(data)
     
-    
-    sendMessageToSlack(message,str(grupo))
+    slack = slackweb.Slack(url='https://hooks.slack.com/services/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')
+    slack.notify(text=message, channel="#integration-cicd",username="serverless bot", icon_emoji=":squirrel: :shitpit:")
 
+    sendMessageToSlack(message,str(grupo))
